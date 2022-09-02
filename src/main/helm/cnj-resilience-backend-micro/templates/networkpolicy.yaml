@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ include "cnj-resilience-backend-micro.fullname" . }}
+  labels:
+  {{- include "cnj-resilience-backend-micro.labels" . | nindent 4 }}
+spec:
+  podSelector:
+    matchLabels:
+      {{- include "cnj-resilience-backend-micro.selectorLabels" . | nindent 6 }}
+  policyTypes:
+    - Ingress
+  ingress:
+    - ports:
+      - protocol: TCP
+        port: 8080

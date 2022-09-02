@@ -1,0 +1,20 @@
+# docker-compose.yml
+# ----------------------------------------------------------------------------
+# Composes Docker containers and volumes to a runnable Java EE application
+# ----------------------------------------------------------------------------
+#
+---
+version: '3'
+
+services:
+
+  downstream-a:
+    image: docker.cloudtrain.aws.msgoat.eu/cloudtrain/cnj-resilience-downstream-a:latest
+    ports:
+      - "38081:8080"
+
+  downstream-b:
+    image: docker.cloudtrain.aws.msgoat.eu/cloudtrain/cnj-resilience-downstream-b:latest
+    ports:
+      - "38082:8080"
+
