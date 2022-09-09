@@ -1,7 +1,7 @@
-git # cnj-resilience-backend-micro
+# cnj-resilience-backend-micro
 
 Simple cloud native java application based on Eclipse Microprofile demonstrating the application of resilience patterns
-when calls to downstream services are failing.
+with [MicroProfile Fault Tolerance](https://github.com/eclipse/microprofile-fault-tolerance) when calls to downstream services are failing.
 
 ## Status
 
