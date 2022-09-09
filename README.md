@@ -3,6 +3,16 @@
 Simple cloud native java application based on Eclipse Microprofile demonstrating the application of resilience patterns
 when calls to downstream services are failing.
 
+## Status
+
+![Build status](https://drone.cloudtrain.msgoat.eu/api/badges/msgoat/cnj-resilience-backend-micro/status.svg)
+
+## Release information
+
+Check [changelog](changelog.md) for latest version and release information.
+
+## Synopsis
+
 The [WelcomeResource] (src/main/java/group/msg/at/cloud/cloudtrain/adapter/rest/in/WelcomeResource.java) returns
 [WelcomeItems](src/main/java/group/msg/at/cloud/cloudtrain/core/entity/WelcomeItems.java)
 for a given user.
