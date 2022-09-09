@@ -5,7 +5,7 @@ when calls to downstream services are failing.
 
 ## Status
 
-![Build status](https://drone.cloudtrain.msgoat.eu/api/badges/msgoat/cnj-resilience-backend-micro/status.svg)
+[![Build Status](https://drone.cloudtrain.aws.msgoat.eu/api/badges/msgoat/cnj-resilience-backend-micro/status.svg)](https://drone.cloudtrain.aws.msgoat.eu/msgoat/cnj-resilience-backend-micro)
 
 ## Release information
 
