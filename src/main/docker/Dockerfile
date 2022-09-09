@@ -14,7 +14,8 @@ ENV JAVA_APPLICATION=${ARG_JAVA_APPLICATION} \
     EXT_JAVA_OPTS="" \
     DOCKER_JAVA_OPTS="-XX:+UseContainerSupport -XX:InitialRAMPercentage=75.0 -XX:MaxRAMPercentage=75.0" \
     PAYARA_JAVA_OPTS="" \
-    PAYARA_ARGUMENTS="--disablephonehome --enablehealthcheck false --nocluster --nohostaware"
+    PAYARA_ARGUMENTS="--disablephonehome --enablehealthcheck true --nocluster --nohostaware" \
+    PAYARA_LOGGING_FORMAT="JSON"
 
 EXPOSE 8080
 
