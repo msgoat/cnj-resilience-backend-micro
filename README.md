@@ -5,7 +5,7 @@ with [MicroProfile Fault Tolerance](https://github.com/eclipse/microprofile-faul
 
 ## Status
 
-[![Build Status](https://drone.cloudtrain.aws.msgoat.eu/api/badges/msgoat/cnj-resilience-backend-micro/status.svg)](https://drone.cloudtrain.aws.msgoat.eu/msgoat/cnj-resilience-backend-micro)
+![Build Status](https://codebuild.eu-west-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoibkRGVDR3MWtiZ3hwRWg2YmExM2wrRVBwUkNoVzJVZ01MVFJMeFI4SWd3UWcxUktvWTJzRTlKWWVsSHF5MHJwK1VBRlZzcFZncVl5d3poM3hLcHhPUW4wPSIsIml2UGFyYW1ldGVyU3BlYyI6ImhQT0huZDdOTzhSNDZldDMiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=mains)
 
 ## Release information
 

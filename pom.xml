@@ -6,33 +6,29 @@
     <artifactId>cnj-resilience-backend-micro</artifactId>
     <version>${revision}${changelist}${sha1}</version>
     <packaging>war</packaging>
-    <description>Simple cloud native Java backend based on Eclipse MicroProfile</description>
+    <description>Cloud native Java backend based on Eclipse MicroProfile demonstrating resilience</description>
     <properties>
         <!-- new Maven version management -->
-        <revision>1.0.0</revision>
-        <sha1></sha1>
-        <changelist></changelist>
+        <revision>2.0.0</revision>
+        <sha1>.12345678</sha1>
+        <changelist>.LOCAL</changelist>
         <!-- common properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- runtime related properties -->
-        <java.version>11</java.version>
-        <jakartaee.version>9.1.0</jakartaee.version>
-        <payara.version>5.2022.1</payara.version>
+        <java.version>17</java.version>
+        <jakartaee.version>10.0.0</jakartaee.version>
+        <payara.version>6.2023.2</payara.version>
         <payara.opentracing.jaeger.version>1.0.1</payara.opentracing.jaeger.version>
-        <microprofile.version>4.1</microprofile.version>
+        <microprofile.version>5.0</microprofile.version>
         <!-- common logging dependencies -->
         <slf4j.version>1.7.32</slf4j.version>
-        <!-- common rest dependencies -->
-        <common.rest.version>0.8.0</common.rest.version>
         <!-- common test dependencies -->
         <junit.version>5.8.1</junit.version>
         <restassured.version>3.3.0</restassured.version>
-        <cnj.common.test.version>3.0.1</cnj.common.test.version>
+        <cnj.common.test.core.version>1.0.0</cnj.common.test.core.version>
+        <cnj.common.test.jakarta.version>0.1.0</cnj.common.test.jakarta.version>
         <!-- common persistence dependencies -->
-        <flyway.version>8.5.0</flyway.version>
-        <postgres.jdbc.version>42.3.1</postgres.jdbc.version>
-        <common.persistence.version>0.8.0</common.persistence.version>
         <!-- docker related properties -->
         <docker.registry.name>docker.cloudtrain.aws.msgoat.eu</docker.registry.name>
         <docker.organization.name>cloudtrain</docker.organization.name>
@@ -154,7 +150,7 @@
         <dependency>
             <groupId>group.msg.at.cloud.common</groupId>
             <artifactId>cnj-common-observability-jakarta</artifactId>
-            <version>0.1.0</version>
+            <version>1.0.0</version>
         </dependency>
         <!-- showcase specific section -->
         <dependency>
@@ -193,19 +189,13 @@
         <dependency>
             <groupId>group.msg.at.cloud.common</groupId>
             <artifactId>cnj-common-test-core</artifactId>
-            <version>0.9.0</version>
+            <version>${cnj.common.test.core.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>group.msg.at.cloud.common</groupId>
             <artifactId>cnj-common-test-jakarta</artifactId>
-            <version>0.1.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-            <version>2.17.0</version>
+            <version>${cnj.common.test.jakarta.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

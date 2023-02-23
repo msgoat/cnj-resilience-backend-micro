@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2023-02-23
+### Changed
+- upgraded to Java 17
+- consolidated with cnj-hello use case
+
 ## [1.0.1] - 2022-09-09
 ### Fixed
 - added JSON logging
