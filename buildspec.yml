@@ -9,6 +9,8 @@ env:
 phases:
   install:
     on-failure: ABORT
+    runtime-versions:
+      docker: 20
     commands:
       - echo "Install helm"
       - curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
