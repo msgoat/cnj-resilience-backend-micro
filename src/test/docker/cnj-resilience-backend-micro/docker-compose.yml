@@ -29,6 +29,7 @@ services:
       - "38089:8089"
     environment:
       AGENT_JAVA_OPTS: "-javaagent:/home/payara/org.jacoco.agent.jar=output=tcpserver,address=*,port=8089"
+      DOCKER_JAVA_OPTS: "-Xms1g -Xmx1g"
       PAYARA_LOGGING_FORMAT: "TEXT"
       CLOUDTRAIN_SERVICES_RECOMMENDATIONS_MP_REST_URL: "http://downstream-a:8080"
       CLOUDTRAIN_SERVICES_WATCHLIST_MP_REST_URL: "http://downstream-b:8080"
