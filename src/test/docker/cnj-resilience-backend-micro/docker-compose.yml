@@ -3,9 +3,6 @@
 # Composes Docker containers and volumes to a runnable Java EE application
 # ----------------------------------------------------------------------------
 #
----
-version: '3.9'
-
 services:
 
   downstream-a:
