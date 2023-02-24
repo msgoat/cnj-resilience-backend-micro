@@ -10,18 +10,11 @@ phases:
   install:
     on-failure: ABORT
     commands:
-      - echo "Install helm"
-      - curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-      - chmod 700 get_helm.sh
-      - ./get_helm.sh
-      - helm version
-      - echo "Install docker compose plugin"
-      - DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
-      - mkdir -p $DOCKER_CONFIG/cli-plugins
-      - curl -SL https://github.com/docker/compose/releases/download/v2.16.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
-      - chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
-      - echo "Check docker compose plugin version"
-      - docker compose version
+      - echo "Running phase install"
+      - echo "Download and run common installation script"
+      - aws s3 cp s3://s3-eu-west-1-cloudtrain-codebuild-shared/cloudtrain-codebuild-install.sh ~/
+      - chmod u+x ~/cloudtrain-codebuild-install.sh
+      - ~/cloudtrain-codebuild-install.sh
   pre_build:
     on-failure: ABORT
     commands:
