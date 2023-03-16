@@ -27,7 +27,7 @@
         <junit.version>5.8.1</junit.version>
         <restassured.version>3.3.0</restassured.version>
         <cnj.common.test.core.version>1.0.0</cnj.common.test.core.version>
-        <cnj.common.test.jakarta.version>0.1.0</cnj.common.test.jakarta.version>
+        <cnj.common.test.jakarta.version>1.0.0</cnj.common.test.jakarta.version>
         <!-- common persistence dependencies -->
         <!-- docker related properties -->
         <docker.registry.name>docker.cloudtrain.aws.msgoat.eu</docker.registry.name>
