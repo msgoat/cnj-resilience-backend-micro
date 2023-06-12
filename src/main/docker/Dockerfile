@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17-jre-alpine
+FROM docker.cloudtrain.aws.msgoat.eu/cloudtrain/cnj-docker-jre17-alpine:latest
 
 LABEL maintainer="michael.theis@msg.group"
 LABEL ${project.groupId}.${project.artifactId}.project="CloudTrain"
@@ -13,8 +13,8 @@ ENV JAVA_APPLICATION=${ARG_JAVA_APPLICATION} \
     JAVA_OPTS="-XshowSettings:vm -XX:+DisableExplicitGC -XX:+UseStringDeduplication -XX:+ParallelRefProcEnabled" \
     EXT_JAVA_OPTS="" \
     AGENT_JAVA_OPTS="" \
-    DOCKER_JAVA_OPTS="-XX:+UseContainerSupport -XX:InitialRAMPercentage=75.0 -XX:MaxRAMPercentage=75.0" \
-    PAYARA_JAVA_OPTS="" \
+    DOCKER_JAVA_OPTS="-XX:InitialRAMPercentage=75.0 -XX:MaxRAMPercentage=75.0" \
+    PAYARA_JAVA_OPTS="-Djavax.net.ssl.trustStore=$JAVA_HOME/lib/security/cacerts" \
     PAYARA_ARGUMENTS="--disablephonehome --enablehealthcheck true --nocluster --nohostaware" \
     PAYARA_LOGGING_FORMAT="JSON"
 

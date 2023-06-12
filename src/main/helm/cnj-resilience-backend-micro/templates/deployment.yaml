@@ -55,24 +55,10 @@ spec:
           resources:
             {{- toYaml .Values.container.main.resources | nindent 12 }}
           env:
-            - name: MP_JWT_VERIFY_PUBLICKEY_LOCATION
-              value: {{ .Values.security.oidc.jwksUri | quote }}
-            - name: MP_JWT_VERIFY_ISSUER
-              value: {{ .Values.security.oidc.issuer | quote }}
             - name: CLOUDTRAIN_SERVICES_RECOMMENDATIONS_MP_REST_URL
               value: {{ .Values.cloudtrain.services.recommendations.url }}
             - name: CLOUDTRAIN_SERVICES_WATCHLIST_MP_REST_URL
               value: {{ .Values.cloudtrain.services.watchlist.url }}
-            - name: CLOUDTRAIN_COMMON_REST_TRACE_ENABLED
-              value: {{ .Values.cloudtrain.common.rest.trace.enabled | quote  }}
-            - name: JAEGER_ENABLED
-              value: {{ .Values.tracing.enabled | quote }}
-            - name: JAEGER_AGENT_HOST
-              value: {{ .Values.tracing.jaeger.agent.host | quote }}
-            - name: JAEGER_AGENT_PORT
-              value: {{ .Values.tracing.jaeger.agent.port | quote }}
-            - name: JAEGER_REPORTER_LOG_SPANS
-              value: {{ .Values.tracing.jaeger.logsSpans | quote }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
