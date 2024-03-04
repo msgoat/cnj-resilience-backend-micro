@@ -3,13 +3,9 @@
 Simple cloud native java application based on Eclipse Microprofile demonstrating the application of resilience patterns
 with [MicroProfile Fault Tolerance](https://github.com/eclipse/microprofile-fault-tolerance) when calls to downstream services are failing.
 
-## Status
-
-![Build Status](https://codebuild.eu-west-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoibkRGVDR3MWtiZ3hwRWg2YmExM2wrRVBwUkNoVzJVZ01MVFJMeFI4SWd3UWcxUktvWTJzRTlKWWVsSHF5MHJwK1VBRlZzcFZncVl5d3poM3hLcHhPUW4wPSIsIml2UGFyYW1ldGVyU3BlYyI6ImhQT0huZDdOTzhSNDZldDMiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=mains)
-
-## Release information
-
-Check [changelog](changelog.md) for latest version and release information.
+The application is packaged as a multi-architecture docker image which supports the following platforms:
+* linux/amd64
+* linux/arm64/v8
 
 ## Synopsis
 
@@ -29,6 +25,22 @@ The application itself offers two REST endpoints:
 
 * GET on `/api/v1/welcome/{userId}` is not resilient and will fail if any of the downstream services breaks.
 * GET on `/api/v1/resilient/welcome/{userId}` is resilient and will keep on working even if any of the downstream services breaks.
+
+## Status
+
+![Build Status](https://codebuild.eu-west-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoibkRGVDR3MWtiZ3hwRWg2YmExM2wrRVBwUkNoVzJVZ01MVFJMeFI4SWd3UWcxUktvWTJzRTlKWWVsSHF5MHJwK1VBRlZzcFZncVl5d3poM3hLcHhPUW4wPSIsIml2UGFyYW1ldGVyU3BlYyI6ImhQT0huZDdOTzhSNDZldDMiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=mains)
+
+## Release information
+
+Check [changelog](changelog.md) for latest version and release information.
+
+## Docker Pull Command
+
+`docker pull docker.cloudtrain.aws.msgoat.eu/cloudtrain/cnj-resilience-backend-micro`
+
+## Helm Pull Command
+
+`helm pull oci://docker.cloudtrain.aws.msgoat.eu/cloudtrain-charts/cnj-resilience-backend-micro`
 
 ## HOW-TO build this application locally
 
